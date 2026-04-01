@@ -1,0 +1,9 @@
+pip freeze > requirements.txt
+```
+This records Flask and its dependencies so Render knows what to install.
+
+### Step 2: Create a `Procfile`
+
+This tells Render how to start your app. Create a file called **`Procfile`** (no extension) with this content:
+```
+web: gunicorn app:app
